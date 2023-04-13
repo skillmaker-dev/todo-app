@@ -17,7 +17,7 @@ export default class App extends React.Component {
   };
 
   handleDeleteTask = (index) => {
-    this.setState({ tasks: this.state.tasks.filter((t, i) => i != index) });
+    this.setState({ tasks: this.state.tasks.filter((_, i) => i != index) });
   };
 
   render() {
