@@ -9,10 +9,9 @@ export default class App extends React.Component {
     };
   }
 
-  handleAddTask = (event) => {
-    event.preventDefault();
+  handleAddTask = (task) => {
     this.setState({
-      tasks: [...this.state.tasks, event.target.taskinput.value],
+      tasks: [...this.state.tasks, task],
     });
   };
 
