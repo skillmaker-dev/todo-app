@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TaskForm = ({ onSubmit }) => {
+export default function TaskForm({ onSubmit }) {
   const [inputText, setInputText] = useState("");
   const handleInputChange = (event) => {
     setInputText(event.target.value);
@@ -36,4 +36,3 @@ const TaskForm = ({ onSubmit }) => {
   );
 };
 
-export default TaskForm;
