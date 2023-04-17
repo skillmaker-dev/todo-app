@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { TasksContext } from "../contexts/TasksContext";
 
-export default function TaskList({ onDelete }) {
+export default function TaskList() {
   const { tasks } = useContext(TasksContext);
+  const { handleDeleteTask } = useContext(TasksContext);
   return (
     <>
       {tasks.map((task, index) => (
@@ -12,12 +13,11 @@ export default function TaskList({ onDelete }) {
           <h4 className="my-0">{task}</h4>
           <button
             className="btn btn-danger"
-            onClick={() => onDelete(index)}>
+            onClick={() => handleDeleteTask(index)}>
             X
           </button>
         </div>
       ))}
     </>
   );
-
 }

@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TasksContext } from "../contexts/TasksContext";
 
-export default function TaskForm({ onSubmit }) {
+export default function TaskForm() {
   const [inputText, setInputText] = useState("");
   const handleInputChange = (event) => {
     setInputText(event.target.value);
   };
+  const { handleAddTask } = useContext(TasksContext);
 
   const handleButtonClick = () => {
-    onSubmit(inputText);
+    handleAddTask(inputText);
     setInputText("");
   };
 
@@ -34,5 +36,4 @@ export default function TaskForm({ onSubmit }) {
       </form>
     </>
   );
-};
-
+}

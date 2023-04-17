@@ -14,10 +14,16 @@ export default function App() {
     setTasks(tasks.filter((_, i) => i != index));
   };
 
+  const contextValues = {
+    tasks,
+    handleAddTask,
+    handleDeleteTask,
+  };
+
   return (
-    <TasksContext.Provider value={{ tasks }}>
-      <TaskList onDelete={handleDeleteTask} />
-      <TaskForm onSubmit={handleAddTask} />
+    <TasksContext.Provider value={contextValues}>
+      <TaskList />
+      <TaskForm />
     </TasksContext.Provider>
   );
 }
