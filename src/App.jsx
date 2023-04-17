@@ -4,15 +4,10 @@ import { TasksContext } from "./contexts/TasksContext";
 import { useState } from "react";
 
 export default function App() {
-
-
-
   const [tasks, setTasks] = useState(["Task 1", "Task 2", "Task 3"]);
 
-
-
   const handleAddTask = (task) => {
-    setTasks(tasks => [...tasks, task]);
+    setTasks((tasks) => [...tasks, task]);
   };
 
   const handleDeleteTask = (index) => {
@@ -21,12 +16,8 @@ export default function App() {
 
   return (
     <TasksContext.Provider value={{ tasks }}>
-      <TaskList
-        onDelete={handleDeleteTask}
-        taskList={tasks}
-      />
+      <TaskList onDelete={handleDeleteTask} />
       <TaskForm onSubmit={handleAddTask} />
-    </TasksContext.Provider >
+    </TasksContext.Provider>
   );
-
 }
