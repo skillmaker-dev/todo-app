@@ -1,9 +1,5 @@
 import { TasksContext } from "./contexts/TasksContext";
 import { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TasksListPage from "./pages/TasksListPage";
-import TaskFormPage from "./pages/TaskFormPage";
-import NavBar from "./components/NavBar.component";
 import AppRouter from "./components/AppRouter";
 
 export default function App() {
