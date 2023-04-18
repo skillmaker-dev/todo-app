@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { TasksContext } from "../contexts/TasksContext";
 
 export default function TaskList() {
-  const { tasks } = useContext(TasksContext);
-  const { handleDeleteTask } = useContext(TasksContext);
+  const { tasks, handleDeleteTask } = useContext(TasksContext);
   return (
     <>
       {tasks.map((task, index) => (
