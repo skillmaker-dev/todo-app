@@ -27,6 +27,9 @@ const NavBar = () => {
             <Link className="nav-link" to={"/form"}>
               Add
             </Link>
+            <Link className="nav-link" to={"/names"}>
+              Names
+            </Link>
           </div>
         </div>
       </div>
