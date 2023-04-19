@@ -25,10 +25,13 @@ const NavBar = () => {
               List
             </Link>
             <Link className="nav-link" to={"/form"}>
-              Add
+              Add Task
             </Link>
             <Link className="nav-link" to={"/names"}>
               Names
+            </Link>
+            <Link className="nav-link" to={"/namesform"}>
+              Add Name
             </Link>
           </div>
         </div>
